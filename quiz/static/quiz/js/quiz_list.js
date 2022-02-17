@@ -46,7 +46,7 @@ shareBtns.forEach((btn) => {
     } else {
       $(btn).attr(
         "data-original-title",
-        "Please set the timer duration, Start Date and Start Time by going into Edit->Settings"
+        "โปรดตั้งระยะเวลาของตัวจับเวลา วันที่เริ่มต้น และเวลาเริ่มต้นโดยไปที่ Edit->Settings"
       );
       $(btn).tooltip("show");
 
