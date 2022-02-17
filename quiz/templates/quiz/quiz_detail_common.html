@@ -1,0 +1,49 @@
+<div class="question">
+    <div class="questionHeader">
+        <p class="quiz-form__question">{{question.question}}</p>
+        <div class="point">
+            <p>{{question.point}}</p>
+            {% if question.point == 1 %}
+            <span>คะแนน</span>
+            {% else %}
+            <span>คะแนน</span>
+            {% endif %}
+        </div>
+    </div>
+
+    {% for choice in question.choice_set.all %}
+
+    <label class="quiz-form__ans" for="{{forloop.parentloop.counter}}_choice{{forloop.counter}}">
+
+        {% if question.type == 'mcq' %}
+
+        <input type="radio" id="{{forloop.parentloop.counter}}_choice{{forloop.counter}}" required
+            name='{{forloop.parentloop.counter}}_radio_option' value='{{forloop.counter}}'>
+
+        <span class="design"></span>
+
+        {% elif question.type == 'checkbox' %}
+
+        <input type="checkbox" id="{{forloop.parentloop.counter}}_choice{{forloop.counter}}"
+            name='{{forloop.parentloop.counter}}_checkbox_{{forloop.counter}}'>
+
+        {% endif %}
+
+        <span class="text">{{choice.choice}}</span>
+
+    </label>
+
+    {% endfor %}
+
+
+    {% if question.type == 'short' %}
+
+    <label class="quiz-form__ans">
+
+        <input type="text" name='{{forloop.counter}}_short_1' required>
+
+    </label>
+
+    {%endif%}
+
+</div>

@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="dashboard">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> student_dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+ 
+    <link rel="stylesheet" href="{% static 'assets/css/student_dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/view_score.css' %}" />
+
+</head>
+<script src="https://cdn.plot.ly/plotly-1.19.1.min.js"></script>
+<body>
+    <header role="banner">
+        <a href="{% url 'student_dashboard' %}">
+            <h1>Student_dashboard</h1>
+        </a>
+
+
+        <ul class="utilities">
+            <li class="users"><a href="#">My Account</a></li>
+            <li class="logout warn"><a href="/logout">Logout</a></li>
+        </ul>
+    </header>
+
+    <main role="main">
+        <section class="textli">
+        <h1>คะแนนแบบทดสอบในแต่ละข้อ</h1>
+        </section>
+        <div class="main1">
+            <div class="container">
+                <div id="graph"></div>
+            </div>
+        </div>
+       
+    </main>
+</body>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script  src="{% static 'assets/js/viewscore.js' %}"></script>
+</html>

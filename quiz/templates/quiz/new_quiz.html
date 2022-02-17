@@ -1,0 +1,37 @@
+{% extends 'quiz/new_update_quiz_common.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+
+    <form action='{% url "new-quiz" %}' method='post' class="quiz-form">
+        {% csrf_token %}
+
+        {% include 'quiz/settings_modal.html' %}
+
+        <div class="heading">
+            <input type='text' class="heading__text" name='quiz' required autofocus placeholder="ชื่อแบบทดสอบ">
+        </div>
+
+        <div class="question">
+            <label for="q_1">1.</label>
+            <input type="text" name="q_1" id="q_1" class="quiz-form__question" required>
+
+            {% include 'quiz/new_quiz_choices.html' %}
+
+            <div class="footer">
+                <div class="point">
+                    <input type="number" name="1_point" value=1 min=0 required>
+                    <span>คะแนน</span>
+                </div>
+                <div class='footerBtns'>
+                    <button type="button" class='mcqDuplicateBtn duplicateBtn'>ทำซ้ำ</button>
+                    <button type="button" class='deleteBtn'>ลบ</button>
+                </div>
+            </div>
+        </div>
+        <button type='submit' id='submit' hidden></button>
+    </form>
+</div>
+
+{% endblock content %}

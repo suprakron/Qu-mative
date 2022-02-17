@@ -1,0 +1,58 @@
+<!-- Copied from  - https://codepen.io/hrsshainik/pen/rNxLKgv -->
+{% load static %}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
+
+<link rel="stylesheet" href="{% static 'taker/result.css' %}">
+
+<div class="container">
+    <div class="heading">
+        <h1 class="heading__text">{{quiz.name}}</h1>
+    </div>
+
+    <div class="quiz">
+        <div class="quiz__heading">
+            <h2 class="quiz__heading-text">
+                Score: {{score}}
+            </h2>
+        </div>
+
+        <form class="quiz-form">
+
+            {% for question in questions %}
+
+                <div class="question">
+                    <div class="questionHeader">
+                        <p class="quiz-form__question">{{question.question}}</p>
+                        <div class="point">
+                            <p>{{question.point}}</p>
+                            {% if question.point == 1 %}
+                            <span>point</span>
+                            {% else %}
+                            <span>points</span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    {% if question.type == 'mcq' %}
+
+                        {% include 'taker/mcq.html' %}
+                    
+                    {% elif question.type == 'checkbox' %}
+                    
+                        {% include 'taker/checkbox.html' %}
+                    
+                    {% elif question.type == 'short' %}
+                    
+                        {% include 'taker/short.html' %}
+
+                    {% endif %}
+
+                </div>
+
+            {% endfor %}
+
+        </form>
+
+    </div>
+</div>

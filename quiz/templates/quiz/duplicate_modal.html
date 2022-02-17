@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="modal fade" id="duplicateModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">แบบทดสอบใหม่</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id='duplicate_form' method="POST">
+                    {%csrf_token%}
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">ชื่อของแบบทดสอบที่จะใช้ซ้ำกัน:</label>
+                        <input type="text" class="form-control" name='quiz' value='{{quiz.name}}' required autofocus>
+                        <button id='submit' type='submit' hidden></button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id='duplicateDone' type="button" class="btn btn-primary">ต่อไป</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'quiz/js/duplicate_quiz.js' %}"></script>
