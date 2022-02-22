@@ -53,12 +53,15 @@ def newQuiz(request):
 @login_required
 def updateQuiz(request, pk):
     quiz = get_object_or_404(Quiz, id=pk)
+
     if request.user != quiz.maker:
         raise PermissionDenied
+
     if request.method == 'POST':
         data = request.POST.dict()
         print(data)
         _updateQuiz(data, quiz)
+
         return redirect('quiz-list')
 
     startDate = quiz.getStartDate()

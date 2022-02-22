@@ -1,13 +1,12 @@
-
 {% load static %}
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
 
-<link rel="stylesheet" href="{% static 'quiz/css/quiz_detail.css' %}">
+<link rel="stylesheet" href="{% static 'quiz/quiz_detail.css' %}">
 
 <footer>
     <form action="{% url 'quiz-update' object.id %}" method="GET">
-        <button type='submit' id='edit' class="btns"> แก้ไข </button>
+        <button type='submit' id='edit' class="btns"> Edit </button>
     </form>
 </footer>
 
@@ -25,4 +24,5 @@
         {% endfor %}
 
     </form>
+
 </div>

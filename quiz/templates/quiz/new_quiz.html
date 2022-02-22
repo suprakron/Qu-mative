@@ -10,7 +10,7 @@
         {% include 'quiz/settings_modal.html' %}
 
         <div class="heading">
-            <input type='text' class="heading__text" name='quiz' required autofocus placeholder="ชื่อแบบทดสอบ">
+            <input type='text' class="heading__text" name='quiz' required autofocus placeholder="Quiz Name">
         </div>
 
         <div class="question">
@@ -22,11 +22,11 @@
             <div class="footer">
                 <div class="point">
                     <input type="number" name="1_point" value=1 min=0 required>
-                    <span>คะแนน</span>
+                    <span>points</span>
                 </div>
                 <div class='footerBtns'>
-                    <button type="button" class='mcqDuplicateBtn duplicateBtn'>ทำซ้ำ</button>
-                    <button type="button" class='deleteBtn'>ลบ</button>
+                    <button type="button" class='mcqDuplicateBtn duplicateBtn'>Duplicate</button>
+                    <button type="button" class='deleteBtn'>Delete</button>
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ import pytz
 
 def takeQuizRegister(request, pk):
     quiz = get_object_or_404(Quiz, id=pk)
-    print(quiz);
+
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
 
@@ -29,6 +29,7 @@ def takeQuizRegister(request, pk):
             taker.save()
 
             return redirect('take-quiz', pk=pk, taker_id=taker.id)
+
     else:
         if quiz.isOver():
             return render(request, 'taker/quiz_not_accepting_responses.html')

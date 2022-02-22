@@ -12,8 +12,8 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
 
-    <link rel="stylesheet" href="{% static 'quiz/css/new_quiz.css' %}">
-    <link rel="stylesheet" href="{% static 'quiz/css/settings_modal.css' %}">
+    <link rel="stylesheet" href="{% static 'quiz/new_quiz.css' %}">
+    <link rel="stylesheet" href="{% static 'quiz/settings_modal.css' %}">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -30,7 +30,7 @@
 
     <header>
         <button type="button" class="btns" data-toggle="modal" data-target="#settingsModal">
-            ตั้งค่า
+            Settings
         </button>
     </header>
 
@@ -38,32 +38,32 @@
 
         <div class="btn-group dropup">
             <button type="button" id='add' class="btn btn-primary add_new">
-                เพิ่มใหม่
+                Add New
             </button>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <span class="sr-only"> </span>
+                <span class="sr-only">Toggle Dropdown</span>
             </button>
             <div class="dropdown-menu">
-                <button id='addCheckbox' class="dropdown-item">แบบถูก-ผิด</button>
-                <button id='addShort' class="dropdown-item">แบบเติมคำ</button>
-                <button id='addMcq' class="dropdown-item">แบบเลือกตอบ</button>
+                <button id='addCheckbox' class="dropdown-item">Checkbox</button>
+                <button id='addShort' class="dropdown-item">Short Answer</button>
+                <button id='addMcq' class="dropdown-item">MCQ</button>
             </div>
         </div>
 
-        <button id='save' class="btns"> บันทึก </button>
+        <button id='save' class="btns"> Save </button>
     </footer>
 
     {% block content %}
     {% endblock content %}
 
-    <script src="{% static 'quiz/js/createElements.js' %}"></script>
-    <script src="{% static 'quiz/js/add_choice.js' %}"></script>
-    <script src="{% static 'quiz/js/delete_choice.js' %}"></script>
-    <script src="{% static 'quiz/js/delete_question.js' %}"></script>
-    <script src="{% static 'quiz/js/duplicate_question.js' %}"></script>
-    <script src="{% static 'quiz/js/settings_modal.js' %}"></script>
-    <script src="{% static 'quiz/js/new_update_common.js' %}"></script>
+    <script src="{% static 'quiz/createElements.js' %}"></script>
+    <script src="{% static 'quiz/add_choice.js' %}"></script>
+    <script src="{% static 'quiz/delete_choice.js' %}"></script>
+    <script src="{% static 'quiz/delete_question.js' %}"></script>
+    <script src="{% static 'quiz/duplicate_question.js' %}"></script>
+    <script src="{% static 'quiz/settings_modal.js' %}"></script>
+    <script src="{% static 'quiz/new_update_common.js' %}"></script>
 
 </body>
 
