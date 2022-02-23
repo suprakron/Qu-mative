@@ -5,11 +5,11 @@
 {% include 'quiz/navbar.html' %}
 
 <div class="create_new_quiz">
-    <a href="{% url 'new-quiz' %}" class="btn btn-outline-info" role="button">Create a Quiz</a>
+    <a href="{% url 'new-quiz' %}" class="btn btn-outline-info" role="button">สร้างแบบทดสอบ</a>
 </div>
 
 <header>
-    <h2>Quizzes</h2>
+    <h2>แบบทดสอบ</h2>
     <hr>
 </header>
 
@@ -22,7 +22,7 @@
         {% include 'quiz/duplicate_modal.html' %}
 
         <form id='{{quiz.id}}' method="POST" action="{% url 'quiz-delete' quiz.id %}" hidden>
-            {% csrf_token %}<input type="submit" value="DELETE">
+            {% csrf_token %}<input type="submit" value="ลบ">
         </form>
 
         <div class="col-3 mb-4">
@@ -32,13 +32,12 @@
                     <h4 class="card-title mb-4">
                         {{quiz.name}}
                     </h4>
-                    <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
-                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                   
                 </div>
                 <div class="card-footer">
-                 
-                    <a href="{% url 'quiz-update' quiz.id%}" class='card-link'>Edit</a>
-                    <a href="{{quiz.get_absolute_url}}" class="card-link">มุมมอง</a>
+                    <a href="{% url 'quiz-update' quiz.id%}" class='card-link'><img src="https://img.icons8.com/fluency-systems-regular/2x/pen.png"></a>
+
+                    <a href="{{quiz.get_absolute_url}}" class="card-link"><img src="https://img.icons8.com/ios-glyphs/2x/eye-disease.png" ></a>
                     <a href="#" class='card-link share' data-value='{{quiz.id}}' data-toggle="tooltip"
                         title="Link Copied to Clipboard!" 
                         {% if quiz.timeLimit is not None and quiz.startDateTime is not None %} data-timer-set='1' {% else %} data-timer-set='0' {% endif %}>Share</a>

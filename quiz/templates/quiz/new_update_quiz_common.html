@@ -30,7 +30,7 @@
 
     <header>
         <button type="button" class="btns" data-toggle="modal" data-target="#settingsModal">
-            Settings
+          ตั้งค่า
         </button>
     </header>
 
@@ -38,20 +38,20 @@
 
         <div class="btn-group dropup">
             <button type="button" id='add' class="btn btn-primary add_new">
-                Add New
+                เพิ่มใหม่
             </button>
             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <div class="dropdown-menu">
-                <button id='addCheckbox' class="dropdown-item">Checkbox</button>
-                <button id='addShort' class="dropdown-item">Short Answer</button>
-                <button id='addMcq' class="dropdown-item">MCQ</button>
+                <!-- <button id='addCheckbox' class="dropdown-item">Checkbox</button> -->
+                <button id='addShort' class="dropdown-item">แบบเติมคำ</button>
+                <button id='addMcq' class="dropdown-item">แบบเลือกตอบ</button>
             </div>
         </div>
 
-        <button id='save' class="btns"> Save </button>
+        <button id='save' class="btns">บันทึก </button>
     </footer>
 
     {% block content %}

@@ -3,14 +3,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Settings</h5>
+                <h5 class="modal-title">ตั้งค่า</h5>
                 <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button> -->
             </div>
             <div class="modal-body">
                 <div class="timer-checkbox">
-                    <p> Enable Timer </p>
+                    <p> เปิดใช้งานตัวจับเวลา </p>
                     <label class="col-form-label switch">
                         <input type="checkbox" name='timer-enabled' autofocus {% if quiz.timeLimit is not None %}
                             checked {%endif %}>
@@ -19,19 +19,19 @@
                 </div>
 
                 <div class="timer mt-2" {% if quiz.timeLimit is None %} style="display: none;" {%endif %}>
-                    <label class="col-form-label mt-2">Timer Duration (in mins)</label>
+                    <label class="col-form-label mt-2">ระยะเวลาจับเวลา(นาที)</label>
                     <input type="number" name='time-limit' min=1 value='{{quiz.timeLimit}}'>
 
-                    <label class="col-form-label mt-2">Start Date</label>
+                    <label class="col-form-label mt-2">วันที่เริ่มต้น</label>
                     <input type="date" name='start-date' value='{{startDate}}'>
 
-                    <label class="col-form-label mt-2">Start Time</label>
+                    <label class="col-form-label mt-2">เวลาที่เริ่มต้น</label>
                     <input type="time" name='start-time' value='{{startTime}}'>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" id='saveSettings' data-dismiss="modal">Save</button>
-                <button type="button" class="btn btn-danger" id='cancelSettings' data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id='saveSettings' data-dismiss="modal">บันทึก</button>
+                <button type="button" class="btn btn-danger" id='cancelSettings' data-dismiss="modal">ยกเลิก</button>
             </div>
         </div>
     </div>
