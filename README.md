@@ -50,3 +50,21 @@ webpage Quiz systems for formative assessment
 
 2.8	 ส่งออกผลการทดสอบของแต่ละวิชาเป็นไฟล์ของโปรแกรมเอกเซลล์ (Microsoft Excel)
 
+
+
+### Setup project cmd and terminal
+
+# 
+
+
+* python manage.py makemigrations
+
+* python manage.py migrate
+
+* python manage.py createsuperuser
+
+* python manage.py runserver
+
+
+
+
