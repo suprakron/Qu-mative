@@ -10,10 +10,30 @@
         {% include 'quiz/settings_modal.html' %}
 
         <div class="heading">
-            <input type='text' class="heading__text" name='quiz' required autofocus placeholder="ชื่อแบบทดสอบ">
+            
+            <input type='text' class="heading__text" name='quiz' required autofocus placeholder="ชื่อวิชา">
+        
         </div>
 
-        <div class="question">
+
+         <div align="center">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   เลือกประเภทแบบทดสอบ
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                     
+                    <button  id='addShort' class="dropdown-item"  >แบบเลือกตอบ</button>
+                    <button id='addMcq' class="dropdown-item"  >แบบเติมคำ</button>
+                </div>
+            </div>
+        </div>  
+
+
+
+        <!--ส่วนของข้อคำถาม ค่าเริ่มต้น-->
+        <!-- <div class="question">
             <label for="q_1">1.</label>
             <input type="text" name="q_1" id="q_1" class="quiz-form__question" required>
 
@@ -29,8 +49,11 @@
                     <button type="button" class='deleteBtn'>ลบ</button>
                 </div>
             </div>
-        </div>
+        </div>   -->
+        <!--ส่วนท้ายของส่วนของข้อคำถาม ค่าเริ่มต้น-->
+
         <button type='submit' id='submit' hidden></button>
+
     </form>
 </div>
 

@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #252c4a;
+    background: #136666;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     color: #fff;
@@ -74,7 +74,7 @@ header {
 }
 
 .question {
-    background-color: rgb(22 20 20);
+    background-color:#4b7c7c;
     padding: 2rem;
     border-radius: 15px;
 }

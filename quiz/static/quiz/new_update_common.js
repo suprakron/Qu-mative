@@ -1,3 +1,5 @@
+/*ฟอร์มของปุ่มในการเลือกประเภทของข้อสอบ */
+
 const saveBtn = document.querySelector('#save')
 const addBtn = document.querySelector('#add')
 const submitBtn = document.querySelector('#submit')

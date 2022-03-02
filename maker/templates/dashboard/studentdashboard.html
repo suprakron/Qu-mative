@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="dashboard">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> student_dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+
+    <link rel="stylesheet" href="{% static 'assets/css/student_dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/view_quiz.css' %}" />
+
+</head>
+
+<body>
+    <header role="banner">
+        <a href="{% url 'student_dashboard' %}">
+            <h1>Student_dashboard</h1>
+        </a>
+        <ul class="utilities">
+            <li class="users"><a href="#">My Account</a></li>
+            <li class="logout warn"><a href="/logout">Logout</a></li>
+        </ul>
+    </header>
+    <nav role="navigation">
+        <ul class="main">
+            <!-- <li class="dashboard"><a href="#">Dashboard</a></li> -->
+            <li class="write"><a href="{% url 'doing_quiz' %}">แบบทดสอบ</a></li>
+
+            <li class="comments"><a href="{% url 'viewscore' %}">คะแนนแบบทดสอบ</a></li>
+            <!-- <li class="users"><a href="#">Manage Users</a></li> -->
+        </ul>
+    </nav>
+
+    <main role="main">
+
+        <section class="box">
+            <div class="boxscore">
+                <div class="row">
+                    <div class="column">
+                        <label align="left">
+                            <h2 class="text"> คณิตศาสตร์</h2> <br>
+                            <h3 class="text">มอบหมายเมื่อ : 27 / 11 2564</h3><br>
+                            <h3 class="text">ครบกำหนดส่ง : 28 / 11 2564</h3>
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="text-center">
+            <div class="box">
+                <div class="boxscore2">
+                    <div class="row">
+                        <div class="column">
+                            <label align="left">
+                                <h2 class="text"> ภาษาไทย</h2> <br>
+                                <h3 class="text">มอบหมายเมื่อ : 27 / 11 2564</h3><br>
+                                <h3 class="text">ครบกำหนดส่ง : 28 / 11 2564</h3>
+                            </label>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</body>
+
+</html>

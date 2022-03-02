@@ -8,7 +8,7 @@ from taker import views as taker_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/', maker_views.register, name='register'),
-    path('login/', auth_views.LoginView.as_view(template_name='maker/login.html'), name='login'),
+    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('', quiz_views.QuizListView.as_view(), name='quiz-list'),
     path('quiz/<int:pk>/', quiz_views.QuizDetailView.as_view(), name='quiz-detail'),
     path('quiz/<int:pk>/update/', quiz_views.updateQuiz, name='quiz-update'),

@@ -16,4 +16,4 @@ def register(request):
             return redirect('quiz-list')
     else:
         form = UserRegisterForm()
-    return render(request, 'maker/register.html', {'form': form})
+    return render(request, 'register.html', {'form': form})

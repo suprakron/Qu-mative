@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="dashboard">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> student_dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="{% static 'assets/css/teacher_dashboard.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/doing_quiz.css' %}" />
+</head>
+
+<body>
+    <header role="banner">
+        <a href="{% url 'student_dashboard' %}">
+            <h1>Student_dashboard</h1>
+        </a>
+
+
+        <ul class="utilities">
+            <li class="users"><a href="#">My Account</a></li>
+            <li class="logout warn"><a href="/logout">Logout</a></li>
+        </ul>
+    </header>
+
+
+    <main role="main">
+        <form name="personalityForm">
+            <div class="wrapper container">
+
+                <div class="quiz-box quiz-1">
+                    <h2 class="quiz-question">1. ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับการเจริญเติบโตของคน</h2>
+                    <span class="quiz-answer">
+                        <label><input type="radio" name="q1" onClick="saver(1,0)">
+                            ระยะก่อนเกิดจะมีพัฒนาการเร็วกว่าช่วงวัยอื่นๆ</label>
+                        <label><input type="radio" name="q1" onClick="saver(1,1)">
+                            วัยเด็กช่วงก่อนวัยเรียนจะเริ่มมีฟันแท้งอกขึ้นมา</label>
+                        <label><input type="radio" name="q1" onClick="saver(1,2)">
+                            ช่วงวัยรุ่นเป็นช่วงที่มีพัฒนาการทางเพศอย่างชัดเจน</label>
+                        <label><input type="radio" name="q1" onClick="saver(1,3)">
+                            วัยผู้ใหญ่ช่วงวัยกลางคนเป็นช่วงที่ร่างกายเริ่มมีการเสื่อมถอย</label>
+
+                    </span>
+                </div>
+
+
+                <div class="quiz-box quiz-2">
+                    <h2 class="quiz-question">2. อาหารในข้อใดต่อไปนี้ให้สารอาหารเหมือนกัน</h2>
+                    <span class="quiz-answer">
+                        <label><input type="radio" name="q2" onClick="saver(2,0)">ถั่วลิสงต้ม – นมสด</label>
+                        <label><input type="radio" name="q2" onClick="saver(2,1)"> ขนมปัง – ไข่ดาว</label>
+                        <label><input type="radio" name="q2" onClick="saver(2,2)"> ข้าวเหนียว – หมูปิ้ง</label>
+                        <label><input type="radio" name="q2" onClick="saver(2,3)"> ไก่ทอด – มันฝรั่งทอด</label>
+
+                    </span>
+                </div>
+
+
+                <div class="quiz-box quiz-3">
+                    <h2 class="quiz-question">เราควรเลือกกินอาหารในข้อใดต่อไปนี้ เพื่อให้ได้รับสารอาหารชนิดต่างๆ
+                        ที่มีประโยชน์
+                    </h2>
+                    <span class="quiz-answer">
+                        <label><input type="radio" name="q3" onClick="saver(3,0)"> ขนมปัง ไข่ดาว นมสด</label>
+                        <label><input type="radio" name="q3" onClick="saver(3,1)"> ข้าว ไข่ต้ม มันเชื่อม</label>
+                        <label><input type="radio" name="q3" onClick="saver(3,2)"> ข้าว ไก่ทอด
+                            ถั่วเขียวต้มน้ำตาล</label>
+                        <label><input type="radio" name="q3" onClick="saver(3,3)"> ข้าว น้ำพริกปลาทู
+                            มะเขือชุบไข่ทอด</label>
+
+                    </span>
+                </div>
+
+
+                <div class="quiz-box quiz-4">
+                    <h2 class="quiz-question"> 4. ข้อใดกล่าวไม่ถูกต้องเกี่ยวกับรูปแบบความสัมพันธ์ของสิ่งมีชีวิต</h2>
+                    <span class="quiz-answer">
+                        <label><input type="radio" name="q4" onClick="saver(4,0)"> สิงโตกับหมาไฮยีนา
+                            มีความสัมพันธ์กับแบบภาวะอิงอาศัย</label>
+                        <label><input type="radio" name="q4" onClick="saver(4,1)"> ต้นฝอยทองกับต้นไม้ใหญ่
+                            มีความสัมพันธ์กันแบบภาวะปรสิต</label>
+                        <label><input type="radio" name="q4" onClick="saver(4,2)"> ปลาการ์ตูนกับดอกไม้ทะเล
+                            มีความสัมพันธ์กันแบบภาวะพึ่งพากัน</label>
+                        <label><input type="radio" name="q4" onClick="saver(4,3)"> ต้นไม้ 2 ต้น ที่อยู่ในกระถางเดียวกัน
+                            มีความสัมพันธ์กันแบบภาวะแข่งขัน</label>
+
+                    </span>
+                </div>
+
+                <div>
+                    <input type="submit" value="ส่ง">
+                </div>
+            </div><!-- /.container -->
+        </form>
+
+    </main>
+
+    <script src="{% static 'assets/js/doing_quiz.js' %}"></script>
+</body>
+
+</html>

@@ -2,6 +2,17 @@
 
 <link rel="stylesheet" href="{% static 'quiz/quiz_list.css' %}">
 
+
+<style>
+    .card-footer.social-item{
+    height: 50px;
+	width: 50px;
+	margin: 0 5px;
+    filter: grayscale(1);
+	transition: .3s ease filter;
+}
+</style>
+
 {% include 'quiz/navbar.html' %}
 
 <div class="create_new_quiz">
@@ -35,14 +46,19 @@
                    
                 </div>
                 <div class="card-footer">
-                    <a href="{% url 'quiz-update' quiz.id%}" class='card-link'><img src="https://img.icons8.com/fluency-systems-regular/2x/pen.png"></a>
+                    
+                        <a href="{% url 'quiz-update' quiz.id%}" class='card-link'>แก้ไข</a>
+                        <a href="{{quiz.get_absolute_url}}" class="card-link">มุมมอง</a>
+                
 
-                    <a href="{{quiz.get_absolute_url}}" class="card-link"><img src="https://img.icons8.com/ios-glyphs/2x/eye-disease.png" ></a>
+        
                     <a href="#" class='card-link share' data-value='{{quiz.id}}' data-toggle="tooltip"
                         title="Link Copied to Clipboard!" 
                         {% if quiz.timeLimit is not None and quiz.startDateTime is not None %} data-timer-set='1' {% else %} data-timer-set='0' {% endif %}>Share</a>
                           <!--ส่วนที่เกี่ยวข้องกับ Google classroom-->
-                    <g:sharetoclassroom size=32 url="http://127.0.0.1:8000/take-quiz/{{quiz.id}}/register/"></g:sharetoclassroom>
+                   
+                          <g:sharetoclassroom size=32 url="http://127.0.0.1:8000/take-quiz/{{quiz.id}}/register/"></g:sharetoclassroom>
+                          
                     {% include 'quiz/3dot_menu.html' %}
                 </div>
             </div>

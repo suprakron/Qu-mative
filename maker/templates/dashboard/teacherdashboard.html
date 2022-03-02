@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="dashboard">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Teacherdash_board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="{% static 'assets/css/teacher_dashboard.css' %}" />
+
+
+    <link rel="stylesheet" href="{% static 'assets/css/all_quiz.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/addbtn.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/boxq.css' %}" />
+</head>
+
+<body>
+    <header role="banner">
+        <a href="{% url 'teacher_dashboard' %}">
+            <h1>Teacherdash_board</h1>
+        </a>
+        <ul class="utilities">
+            <li class="users"><a href="#">My Account</a></li>
+            <li class="logout warn"><a href="/logout">Logout</a></li>
+        </ul>
+    </header>
+
+    <nav role="navigation">
+        <ul class="main">
+            <!-- <li class="edit"><a href="{% url 'create_quiz' %}">สร้างแบบทดสอบ</a></li> -->
+            <li class="comments"><a href="{% url 'reply_score' %}">ประกาศคะแนน</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <section>
+            <a href="{% url 'new-quiz' %}">
+                <button type="button" class="right">
+                    <img src="{% static 'assets/img/logocreatequiz/add.png' %}" alt="Add icon">
+                </button>
+            </a>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </section>
+       
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>

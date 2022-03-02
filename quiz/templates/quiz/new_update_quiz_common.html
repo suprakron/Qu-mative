@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,13 +26,11 @@
 </head>
 
 <body>
-
     <header>
         <button type="button" class="btns" data-toggle="modal" data-target="#settingsModal">
           ตั้งค่า
         </button>
     </header>
-
     <footer>
 
         <div class="btn-group dropup">
@@ -45,13 +42,13 @@
                 <span class="sr-only">Toggle Dropdown</span>
             </button>
             <div class="dropdown-menu">
-                <!-- <button id='addCheckbox' class="dropdown-item">Checkbox</button> -->
+                 <button id='addCheckbox' class="dropdown-item"> </button>  
                 <button id='addShort' class="dropdown-item">แบบเติมคำ</button>
                 <button id='addMcq' class="dropdown-item">แบบเลือกตอบ</button>
             </div>
         </div>
 
-        <button id='save' class="btns">บันทึก </button>
+        <button id='save' class="btns">บันทึก</button>
     </footer>
 
     {% block content %}
