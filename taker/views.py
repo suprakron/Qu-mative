@@ -84,7 +84,6 @@ def submitQuiz(request, pk, taker_id):
 
     data = request.POST.dict()
     print(data)
-
     taker.quiz = quiz
     taker.save()
 
@@ -104,8 +103,7 @@ def result(request, pk, taker_id):
     quiz = get_object_or_404(Quiz, id=pk)
     taker = get_object_or_404(Taker, id=taker_id)
 
-    # if this url is visited by a logged in user who has not created this quiz deny
-    # but still need to solve that anonymous user can still access this url
+  
     if not request.user.is_anonymous:
         if request.user != quiz.maker:
             raise PermissionDenied
@@ -115,3 +113,6 @@ def result(request, pk, taker_id):
     score = taker.score
 
     return render(request, 'taker/result.html', {'score': score, 'quiz': quiz, 'questions': takerQuestions})
+
+def Ans_overview(request):
+    return render(request, 'taker/Answer_overview.html')

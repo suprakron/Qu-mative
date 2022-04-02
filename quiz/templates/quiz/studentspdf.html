@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/bootstrap.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/fontawesome.css'%}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <title>mojtaba's Site</title>
+  </head>
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Students list</h1>
+        <div class='row'>
+        
+            </div>
+            <br>
+            <br>
+            
+
+
+                <table class="table table-borded">
+                    <thead>
+                    <br>
+                    <tr style=" background-color : green ; color : white ;">
+                    <br>
+                    <th scope="col">ชื่อ</th>
+                   <th scope="col">อีเมลล์</th>
+                  <th scope="col">คะแนน</t>
+                  <th scope="col">แบบทดสอบ</th>
+
+                    </tr>
+                    </thead>
+                    <thead>
+                    <br>
+                    {% for student in students %}
+                    <tr style=" background-color : green ; color : white ;">
+                        <th>{{student.id}}</th>
+                        <th>{{student.Name}}</th>
+                        <th>{{student.Family}}</th>
+                        <th>{{student.Code}}</th>
+                        <br>
+
+                    </tr>
+                    {% endfor %}
+                    </thead>
+                
+                
+                
+                </table>
+        </div>
+
+
+
+
+
+
+
+
+        </div>
+      </main>
+
+
+</html>

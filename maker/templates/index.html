@@ -1,0 +1,396 @@
+{%extends 'layouthome.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- =========================  ส่วนหัว ========================= -->
+<header class="header">
+    <div class="navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="" href="/">
+
+                            <!-- <img src="assets/img/logo/logo.svg" alt="Logo" /> -->
+                            <img src="{% static 'assets/img/logo/logo-1.png' %}" alt="Logo" />
+
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                            <span class="toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                            <ul id="nav" class="navbar-nav ml-auto">
+                               <!-- <li class="nav-item">
+                                    <a class="" href="/loginForm">เข้าสู่ระบบ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="" href="/register_optionsForm">ลงทะเบียน</a>
+                                </li>  
+                                
+                                <li class="nav-item">
+                                    <a class="page-scroll" href="#about">เกี่ยวกับเรา</a>
+                                </li>-->
+                            </ul>
+                        </div>
+                       
+                    </nav>
+                  
+                </div>
+            </div>
+            
+        </div>
+      
+    </div>
+     
+</header>
+<!-- =========================  จบส่วนหัว ========================= -->
+
+ 
+<section id="home" class="hero-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <div class="hero-content">
+                    <h1 class="wow fadeInUp" data-wow-delay=".2s">Quiz system for formative assesment</h1>
+                    <p class="wow fadeInUp" data-wow-delay=".4s">
+                        
+                    </p>
+                    <div class="row justify-content-evenly">
+                        <div class="col-4">
+                            <a href="{% url 'login' %}" rel="nofollow" class="main-btn btn-hover wow fadeInUp"
+                                data-w ow-delay=".6s">เข้าสู่ระบบ</a>
+                        </div>
+                        <div class="col-4">
+                            <a href="{% url 'register' %}" rel="nofollow" class="main-btn btn-hover wow fadeInUp bg-dark text-light
+								data-wow-delay=" .6s">ลงทะเบียน</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="hero-img wow fadeInUp" data-wow-delay=".5s">
+
+                    <img src="{% static 'assets/img/hero/hero-img.svg' %}" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================= pricing-section start ========================= -->
+<!--
+
+<section id="pricing" class="pricing-section pt-130 ">
+    <div class="container">
+        <div class="row text-center pb-5 pt-3">
+            <div class="col-md-12 text-center">
+                <div class="lc-block">
+                   
+                    <h2 editable="inline" class="display-2 mb-0 font-weight-bold">ทีม ผู้พัฒนา</h2>
+                    
+                  
+
+                </div> 
+            </div>
+        </div>
+
+        <div class="row pb-4" >
+            <div class="col-md-6">
+                <div class="card-box text-center">
+                    <div class="user-pic">
+                        <img src="https://scontent.fphs1-1.fna.fbcdn.net/v/t1.6435-9/136493362_404470747458042_8555812964276909140_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=WHly764eYQ4AX8Eq3KJ&_nc_ht=scontent.fphs1-1.fna&oh=f7964ffb488a5644c6cbce68966ec8c9&oe=61A52758"
+                            class="img-fluid" alt="User Pic">
+                    </div>
+                    <h4>Suprakron Maprachum</h4>
+                    <h6>developer</h6>
+                    <hr>
+                   
+                    <a href="#" class="btn btn-primary">เพิ่มเติม</a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-box text-center">
+                    <div class="user-pic">
+                        <img src="https://scontent.fphs1-1.fna.fbcdn.net/v/t1.6435-9/128772682_3621525497892937_8348607788648456552_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=vk9RP247aTIAX_jesVr&tn=0b97RlxNF_5-LeVW&_nc_ht=scontent.fphs1-1.fna&oh=b7d95995bae28628d50937e38aa9cdbc&oe=61A3F170"
+                            class="img-fluid" alt="User Pic">
+                    </div>
+                    <h4> watsaphon khunthon</h4>
+                    <h6>Web Design</h6>
+                    <hr>
+                     
+                    <a href="#" class="btn btn-primary">เพิ่มเติม</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
+-->
+
+
+
+
+
+ 
+<!-- ========================= pricing-section end ========================= -->
+
+
+
+<!-- ========================= footer start ========================= -->
+<footer class="footer mt-150 pt-90">
+    <div class="container">
+        <div class="subscribe-wrapper">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-9">
+                    <!-- <div class="section-title text-center mb-45">
+                        <h1 class="mb-25 text-white wow fadeInUp" data-wow-delay=".2s">Subscribe Our Newsletter</h1>
+                        <p class="text-white wow fadeInUp" data-wow-delay=".4s">Lorem ipsum dolor sit amet,
+                            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
+                    </div>-->
+                   
+
+                </div>
+            </div>
+        </div>
+     <!--   <div class="widget-wrapper">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="logo">
+                            <a href="index.html"> <img src="{% static 'assets/img/logo/logo-1.png' %}" alt="logo"> </a>
+                        </div>
+                        <ul class="socials">
+                            <li>
+                                <a href="javascript:void(0)"> <i class="lni lni-facebook-filled"></i> </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"> <i class="lni lni-twitter-filled"></i> </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"> <i class="lni lni-instagram-filled"></i> </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)"> <i class="lni lni-linkedin-original"></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h3 class="text-white">เกี่ยวกับเรา</h3>
+                        <ul class="links">
+                       
+                            <li>
+                                <a href="javascript:void(0)"> หน้าแรก</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">ทีมพัฒนา </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              <!--  <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h3 class="text-white">Terms</h3>
+                        <ul class="links">
+                            <li>
+                                <a href="javascript:void(0)">Refund Policy</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Support Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="footer-widget">
+                        <h3 class="text-white">Links</h3>
+                        <ul class="links">
+                            <li>
+                                <a href="javascript:void(0)">Help </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Support </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">Contact </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+               
+
+        </div>
+    </div>-->
+    <p class="text-center pb-30" style="color: #fff">@ Quiz system for formative assesment <a
+        href="https://graygrids.com" rel="nofollow" style="color: #fff"> </a></p>
+    </div>
+</footer>
+
+<!-- ========================= scroll-top ========================= -->
+<a href="#" class="scroll-top btn-hover">
+    <i class="lni lni-chevron-up"></i>
+</a>
+{% endblock%}
+
+
+
+{% block css %}
+
+<style>
+    .user-pic {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 100%;
+        margin: 20px auto 20px;
+        border-left: 3px solid #ddd;
+        border-right: 3px solid #ddd;
+        border-top: 3px solid #007bff;
+        border-bottom: 3px solid #007bff;
+        transform: rotate(-30deg);
+        transition: 0.5s;
+    }
+
+    .card-box:hover .user-pic {
+        transform: rotate(0deg);
+        transform: scale(1.1);
+    }
+
+    .card-box {
+        padding: 15px;
+        background-color: #fdfdfd;
+        margin: 20px 0px;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        box-shadow: 0px 0px 8px 0px #d4d4d4;
+        transition: 0.5s;
+    }
+
+    .card-box:hover {
+        border: 1px solid #007bff;
+    }
+
+    .card-box p {
+        color: #808080;
+    }
+</style>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========================= service-section start ========================= -->
+<!--<section id="features" class="service-section pt-150">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-9">
+                <div class="service-content">
+                    <div class="section-title">
+                        <h1 class="mb-30 wow fadeInUp" data-wow-delay=".2s">ระบบใช้งานง่าย</h1>
+                        <p class="mb-40 wow fadeInUp" data-wow-delay=".4s">เพียงไม่กี่คลิก ก็สามารถทำข้อสอบ
+                            ที่ต้องการได้อย่างง่ายดาย พร้อมดูคะแนน
+                            และเฉลยคำตอบทันทีหลังทำข้อสอบเสร็จ .</p>
+                        <a href="javascript:void(0)" class="main-btn btn-hover border-btn wow fadeInUp"
+                            data-wow-delay=".6s">Get Started</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-img wow fadeInUp" data-wow-delay=".5s">
+                    <img src="{% static 'assets/img/about/about-img.svg' %}" alt=""">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>-->
+
+<!-- ========================= service-section end ========================= -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========================= about-section start ========================= -->
+
+<!-- <section id=" about" class="about-section pt-150">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="about-img wow fadeInUp" data-wow-delay=".5s">
+                                    <img src="{% static 'assets/img/about/about-img.svg' %}" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="about-content">
+                                    <div class="section-title">
+                                        <h1 class="wow fadeInUp" data-wow-delay=".2s">ข้อสอบได้มาตรฐาน</h1>
+                                        <p class="wow fadeInUp" data-wow-delay=".4s">คลังข้อสอบที่มีคุณภาพ ตรงตามมาตรฐาน
+                                            หลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน
+                                            และข้อสอบโครงการต่าง ๆ</p>
+                                    </div>
+
+                                    <div class="counter-up wow fadeInUp" data-wow-delay=".8s">
+                                        <div class="single-counter">
+                                            <h3 id="secondo1" class="countup" cup-end="1" cup-append="M+">1 </h3>
+                                            <h5>Downloads</h5>
+                                        </div>
+                                        <div class="single-counter position-relative">
+                                            <h3 id="secondo2" class="countup" cup-end="234" cup-append="K+">234 </h3>
+                                            <h5>Happy Users</h5>
+                                        </div>
+                                        <div class="single-counter">
+                                            <h3 id="secondo3" class="countup" cup-end="34" cup-append="K+">34 </h3>
+                                            <h5>Reviews</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</section>  -->
+
+<!-- ========================= about-section end ========================= -->

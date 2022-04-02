@@ -117,8 +117,4 @@ $('.modal').on('shown.bs.modal', function () {
 // resultBtn = document.querySelector('#resultBtn')
 // resultBtn.onclick = (e) => {
 //     // id = e.srcElement.getAttribute('data-id')
-
-
-
-
 // }

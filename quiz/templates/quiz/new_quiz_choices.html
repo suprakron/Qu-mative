@@ -1,8 +1,10 @@
 {%for i in defaultNumberOfChoices %}
 
     <div class="quiz-form__ans">
+        
         <input type="radio" name='1_radio_option' value='{{i}}' required>
         <span class="design"></span>
+
         <input type="text" name="1_option{{i}}" placeholder="เพิ่มตัวเลือก {{i}}" required>
         <svg fill="#5c626f" class="delete_mcq_choice delete_choice" xmlns="http://www.w3.org/2000/svg"
             width="24" height="24" viewBox="0 0 24 24">

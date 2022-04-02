@@ -1,3 +1,6 @@
+<!--ต้องแก้ไขเนื่องจากเป็นส่วนจากการแก้ไข-->
+
+
 {% extends 'quiz/new_update_quiz_common.html' %}
 {% load static %}
 
@@ -16,6 +19,8 @@
         {% for question in quiz.question_set.all %}
 
         <div class="question">
+ 
+ 
             <label for="q_{{forloop.counter}}">{{forloop.counter}}.</label>
             <input type="text" name="q_{{forloop.counter}}" id="q_{{forloop.counter}}" class="quiz-form__question"
                 required value='{{question.question}}'>

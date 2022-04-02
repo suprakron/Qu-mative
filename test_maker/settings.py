@@ -28,7 +28,7 @@ SECRET_KEY = '@^c9-5-e^tds%&kyxrbd2d0jxll76@m^-8_5(-)m&=m!a!($32'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-     'localhost:8000'
+     'qu-mative.herokuapp.com'
 ]
 
 # Application definition
@@ -133,6 +133,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'quiz-list'
 
-LOGIN_URL = 'login'
+LOGIN_URL = 'index'
+
+LOGOUT_REDIRECT_URL = 'login'
+
 
 django_heroku.settings(locals())

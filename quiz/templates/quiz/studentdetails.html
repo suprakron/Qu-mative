@@ -1,0 +1,44 @@
+
+ {% extends 'quiz/layout.html' %}
+
+{% block titlepage %}
+
+this is  {{student.Name}}'s details 
+
+{% endblock %}
+
+
+{% block MainContent %}
+
+            </div>
+            <br>
+            <br>
+            
+
+
+                <table class="table table-borded">
+                    <thead>
+                    <tr style=" background-color : green ; color : white ;">
+                        <th scope="col">ชื่อ</th>
+                   <th scope="col">อีเมลล์</th>
+                  <th scope="col">คะแนน</t>
+                  <th scope="col">แบบทดสอบ</th>
+
+                    </tr>
+                    </thead>
+                    <thead>
+
+                    <tr style=" background-color : green ; color : white ;">
+                        <th>{{student.Name}}</th>
+                        <th>{{student.Family}}</th>
+                        <th>{{student.Code}}</th>
+                    </tr>
+                    </thead>
+                </table>
+        </div>
+
+
+
+
+
+{% endblock %}

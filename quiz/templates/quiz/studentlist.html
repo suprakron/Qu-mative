@@ -1,0 +1,61 @@
+
+ {% extends 'quiz/layout.html' %}
+
+{% block titlepage %}
+
+this is all Students List
+
+{% endblock %}
+
+
+{% block MainContent %}
+
+
+
+
+            </div>
+            <br>
+            <br>
+            
+
+
+                <table class="table table-borded">
+                    <thead>
+                    <tr style=" background-color : green ; color : white ;">
+                        <th scope="col">ชื่อ</th>
+                        <th scope="col">อีเมลล์</th>
+                       <th scope="col">คะแนน</t>
+                       <th scope="col">แบบทดสอบ</th>
+
+                    </tr>
+                    </thead>
+                    <thead>
+                    {% for student in students %}
+                    <tr style=" background-color : green ; color : white ;">
+                        <th><a href="{{student.get_absolute_url}}">{{student.Name}}</a></th>
+                        <th>{{student.Family}}</th>
+
+                    </tr>
+                    {% endfor %}
+                    </thead>
+                
+                
+                
+                </table>
+        </div>
+
+
+        <div>
+  
+        
+        <a href="/Exportstudent/" class='btn btn-success' >Export CSV</a>
+        <a href="/Exportexcel/" class='btn btn-primary' >Export Excel</a>
+        <a href="/Exportpdf/" class='btn btn-danger' >Export PDF</a>
+        
+        </div>
+
+
+
+
+
+{% endblock %}

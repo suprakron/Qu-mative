@@ -6,15 +6,15 @@
     <form method='POST'>
         {% csrf_token %}
         <fieldset>
-            <legend>Register</legend>
+            <legend>ลงทะเบียน</legend>
             {{ form|crispy }}
         </fieldset>
-        <button type="submit" class="btn btn-outline-info">Sign Up</button>
+        <button type="submit" class="btn btn-outline-info">ลงทะเบียน</button>
     </form>
 
     <div class="border-top pt-3">
-        <small>Already have an Account?
-            <a href="{% url 'login' %}">Sign In</a>
+        <small>มีบัญชีอยู่แล้ว?
+            <a href="{% url 'login' %}">เข้าสู่ระบบ</a>
         </small>
     </div>
 </div>

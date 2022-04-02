@@ -10,7 +10,7 @@ def createQuiz(data, user):
             hour = int(data['start-time'][:2])
             minute = int(data['start-time'][3:])
             startDate = data['start-date']
-            # tz = pytz.timezone('Asia/Kolkata')
+         
             startDateTime = datetime.strptime(
                 startDate, '%Y-%m-%d').replace(hour=hour, minute=minute)
         else:

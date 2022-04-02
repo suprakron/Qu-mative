@@ -1,3 +1,5 @@
+<!--หน้าเทมเพลตสร้างควิช-->
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +33,9 @@
           ตั้งค่า
         </button>
     </header>
-    <footer>
+
+
+    <footer class="footerbtn">
 
         <div class="btn-group dropup">
             <button type="button" id='add' class="btn btn-primary add_new">
@@ -51,11 +55,16 @@
         <button id='save' class="btns">บันทึก</button>
     </footer>
 
+
+
     {% block content %}
+
+
     {% endblock content %}
 
     <script src="{% static 'quiz/createElements.js' %}"></script>
-    <script src="{% static 'quiz/add_choice.js' %}"></script>
+    <script src="{% static 'quiz/add_choice.js' %}"></script>  
+
     <script src="{% static 'quiz/delete_choice.js' %}"></script>
     <script src="{% static 'quiz/delete_question.js' %}"></script>
     <script src="{% static 'quiz/duplicate_question.js' %}"></script>

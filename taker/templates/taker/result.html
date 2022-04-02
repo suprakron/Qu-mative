@@ -1,58 +1,146 @@
-<!-- Copied from  - https://codepen.io/hrsshainik/pen/rNxLKgv -->
 {% load static %}
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
-
 <link rel="stylesheet" href="{% static 'taker/result.css' %}">
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 <div class="container">
     <div class="heading">
         <h1 class="heading__text">{{quiz.name}}</h1>
     </div>
+    <a href="{% url 'answer_overview'%}">
+
+        <div align="center">
+            <button type="button" class="btn btn-primary">ผลสรุป</button>
+        </div>
+    </a>
+
+
+
+    <!--ส่วนของกราฟ-->
+
+    <!--ส่วนท้ายส่วนของกราฟ-->
 
     <div class="quiz">
+
+        <!--ส่วนของคะแนน-->
         <div class="quiz__heading">
             <h2 class="quiz__heading-text">
                 Score: {{score}}
             </h2>
         </div>
 
-        <form class="quiz-form">
 
-            {% for question in questions %}
+        <div class="row">
+            <div class="col-6">
+                <form class="quiz-form">
+                    {% for question in questions %}
+                    <div class="question">
 
-                <div class="question">
-                    <div class="questionHeader">
-                        <p class="quiz-form__question">{{question.question}}</p>
-                        <div class="point">
-                            <p>{{question.point}}</p>
-                            {% if question.point == 1 %}
-                            <span>point</span>
-                            {% else %}
-                            <span>points</span>
-                            {% endif %}
+                        <!-- ส่วนของฟอร์มข้อคำถาม -->
+                        <div class="questionHeader">
+                            <p class="quiz-form__question">{{question.question}}</p>
+                            <div class="point">
+
+                                <p>{{question.point}}</p>
+                                {% if question.point == 1 %}
+                                <span>point</span>
+                                {% else %}
+                                <span>points</span>
+                                {% endif %}
+
+                            </div>
                         </div>
-                    </div>
 
-                    {% if question.type == 'mcq' %}
+
+
+
+                        {% if question.type == 'mcq' %}
 
                         {% include 'taker/mcq.html' %}
-                    
-                    {% elif question.type == 'checkbox' %}
-                    
+
+                        {% elif question.type == 'checkbox' %}
+
                         {% include 'taker/checkbox.html' %}
-                    
-                    {% elif question.type == 'short' %}
-                    
+
+                        {% elif question.type == 'short' %}
+
                         {% include 'taker/short.html' %}
 
-                    {% endif %}
+                        {% endif %}
 
-                </div>
 
-            {% endfor %}
 
-        </form>
+                    </div>
+
+                    {% endfor %}
+
+                </form>
+            </div>
+            <div class="col-6">
+
+                <div class="myChart"></div>
+
+
+
+            </div>
+        </div>
+
 
     </div>
 </div>
+
+
+<script>
+
+    var state = {
+        'items': [],
+        'values': [],
+    }
+
+    var objId = "{{question}}"
+
+    var dataURL = `/taker/result/${objId}/`
+    $.ajax({
+        method: 'GET',
+        url: dataURL,
+        success: function (response) {
+            console.log('RESPONSE:', response)
+            for (var i in response) {
+
+                var key = Object.keys(response[i])[0]
+                var value = Object.values(response[i])[0]
+
+                state.items.push(key)
+                state.values.push(value)
+            }
+
+            console.log('STATE:', state)
+            buildChart()
+
+        }
+    })
+
+    function buildChart() {
+        var chartData = {
+            "type": "bar",
+            "scale-x": {
+                "values": state.items
+            },
+            "series": [
+                {
+                    "values": state.values
+                }
+            ]
+        }
+        zingchart.render({
+            id: "myChart",
+            data: chartData,
+        });
+    }
+
+
+
+
+</script>
