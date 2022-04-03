@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: #2e0436;
+    background: #183f4d;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
 }
@@ -182,7 +182,7 @@ input[type='text']:focus, .point input:focus {
 
 .quiz-form__ans .delete_choice:hover {
     cursor: pointer;
-    fill: #ff0019;
+    fill: #e0cdcf;
 }
 
 /* .quiz-form__ans input[type='text'] {

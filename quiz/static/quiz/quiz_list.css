@@ -25,7 +25,7 @@
 }
 
 .more-menu-btn {
-    background: none;
+    background:rgb(247, 247, 253);
     border: 0 none;
     line-height: normal;
     overflow: visible;
@@ -46,7 +46,7 @@
 }
 
 .more-dot {
-    background-color: #aab8c2;
+    background-color: #20a9e8;
     margin: 0 auto;
     display: inline-block;
     width: 7px;
@@ -63,8 +63,8 @@
     z-index: 900;
     float: left;
     padding: 5px 0;
-    background-color: #fff;
-    border: 1px solid #ccd8e0;
+    background-color: rgb(188, 127, 127);
+    border: 1px solid #496c84;
     border-radius: 4px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     opacity: 0;
@@ -92,7 +92,7 @@
 }
 
 .more-menu-caret-outer {
-    border-top: 10px solid #c1d0da;
+    border-top: 10px solid #234053;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     height: auto;
@@ -106,7 +106,7 @@
     left: 1px;
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
-    border-top: 9px solid #fff;
+    border-top: 9px solid rgb(227, 137, 137);
 }
 
 .more-menu-items {
@@ -136,11 +136,11 @@
 }
 
 .more-menu-item:hover .more-menu-btn {
-    color: #fff;
+    color: rgb(155, 72, 72);
 }
 
 .more-btn:hover .more-dot, .show-more-menu .more-dot {
-    background-color: #516471;
+    background-color: #316080;
 }
 
 .show-more-menu .more-menu {
@@ -163,7 +163,7 @@ header {
 
 .card a {
     text-decoration: none;
-    color: white;
+    color: rgb(250, 248, 248);
 }
 
 .card a:hover {
@@ -189,7 +189,7 @@ header {
     border-radius: 100vh;
     padding: 0.8rem 1.5rem;
     background: #117eeb;
-    color: #fff;
+    color: rgb(255, 255, 255);
     font-family: inherit;
     text-transform: uppercase;
     font-size: 1rem;

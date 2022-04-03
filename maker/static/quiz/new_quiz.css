@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: #252c4a;
+    background: #4ebae1e5;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
 }
@@ -73,7 +73,7 @@ input.heading__text:-webkit-autofill, input.heading__text:-webkit-autofill:hover
     border-top: 1px solid rgb(74, 70, 70);
     padding-top: 1rem;
     margin-top: 2rem;
-    color: rgb(170 170 170);
+    color: rgb(34, 70, 107);
 }
 
 .footerBtns {
@@ -106,7 +106,7 @@ input.heading__text:-webkit-autofill, input.heading__text:-webkit-autofill:hover
     border-bottom: 1px solid gray;
     font-size: 1.2rem;
     text-align: center;
-    color: rgb(170 170 170);
+    color: rgb(47, 117, 149);
 }
 
 .point span {
@@ -125,8 +125,8 @@ input[type='text'] {
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid gray;
-    color: white;
+    border-bottom: 1px solid rgb(248, 254, 255);
+    color: black;
 }
 
 .quiz-form__ans input[type='text'] {
@@ -134,7 +134,7 @@ input[type='text'] {
 }
 
 .quiz-form__ans input[type='text']::placeholder {
-    color: rgb(140, 140, 140);
+    color: rgb(3, 28, 41);
 }
 
 .quiz-form__ans input.add_choice {
@@ -155,10 +155,10 @@ input[type='text']:focus, .point input:focus {
 }
 
 .question {
-    background-color: rgb(22 20 20);
+    background-color: rgb(207, 229, 245);
     padding: 2rem;
     border-radius: 15px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .quiz-form__ans {
