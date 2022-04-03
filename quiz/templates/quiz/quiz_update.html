@@ -19,8 +19,24 @@
         {% for question in quiz.question_set.all %}
 
         <div class="question">
- 
- 
+
+            <div align="right">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ด้านพุทธิพิสัย
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">จำ (Remember) </a>
+                        <a class="dropdown-item" href="#">เข้าใจ (Understand) </a>
+                        <a class="dropdown-item" href="#">ประยุกต์ใช้ (Apply) </a>
+                        <a class="dropdown-item" href="#">วิเคราะห์ (Analyze) </a>
+                        <a class="dropdown-item" href="#">ประเมินค่า (Evaluate) </a>
+                        <a class="dropdown-item" href="#">สร้างสรรค์ (Create) </a>
+                    </div>
+                </div>
+            </div>
+
             <label for="q_{{forloop.counter}}">{{forloop.counter}}.</label>
             <input type="text" name="q_{{forloop.counter}}" id="q_{{forloop.counter}}" class="quiz-form__question"
                 required value='{{question.question}}'>

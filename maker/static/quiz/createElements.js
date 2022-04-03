@@ -27,9 +27,24 @@ function createQuestionLabelAndInput(q_inp_value) {
     q_inp.required = true
     q_inp.value = q_inp_value
 
+    // const para = document.createElement("p");
+    // var values = ["ด้านพุทธิพิสัย","จำ ", "เข้าใจ ", "ประยุกต์ใช้ ", "วิเคราะห์ ","ประเมินค่า ","สร้างสรรค์ "];
+ 
+    // var select = document.createElement("select");
+    // select.name = `q_select_${q_number}`;
+    // select.id = `q_select_${q_number}`
+    // select.classList.add('form-select')
+    // for (const val of values)
+    // {
+    //     var option = document.createElement("option");
+    //     option.value = val;
+    //     option.text = val.charAt(0).toUpperCase() + val.slice(1);
+    //     select.appendChild(option);
+    // }
+    
     question.appendChild(label)
     question.appendChild(q_inp)
-
+    // question.appendChild(select)
     return { question, q_inp }
 }
 
@@ -84,24 +99,24 @@ function createOptions(number_of_choices, question_type, r_inps_checked, o_inps_
 }
 
 function createShortAnswerOption(question_type, number_of_choices, t_inps_value, question) {
-    for (let i = 1; i < number_of_choices + 1; i++) {
+    for (let i = 1; i < 1 + 1; i++) {
         div = document.createElement('div')
         div.classList.add('quiz-form__ans')
 
         t_inp = document.createElement('input')
         t_inp.type = 'text'
         t_inp.name = `${q_number}_short_${i}`
-        t_inp.placeholder = `Answer ${i}`
+        t_inp.placeholder = `คำตอบ ${i}`
         t_inp.required = true
         if (t_inps_value != null) t_inp.value = t_inps_value[i - 1]
 
         div.appendChild(t_inp)
 
-        div.appendChild(createDeleteChoiceSvg(question_type))
+        // div.appendChild(createDeleteChoiceSvg(question_type))
         question.appendChild(div)
     }
 
-    question.appendChild(createAddChoiceDiv(question_type))
+    // question.appendChild(createAddChoiceDiv(question_type))
 }
 
 function createQuestionFooter(points_inp_value, question_type, question) {
