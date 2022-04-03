@@ -9,7 +9,11 @@ html {
 }
 
 body {
+<<<<<<< HEAD
     background: #4ebae1e5;
+=======
+    background: #b5e6e6;
+>>>>>>> e3bd2b1928c054e030a45cdf43ed791a2763ef95
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
 }
