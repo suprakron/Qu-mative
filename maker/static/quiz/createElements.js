@@ -11,6 +11,7 @@ function createQuestion(question_type, q_inp_value = null, r_inps_checked = null
     question.scrollIntoView()
 }
 
+
 function createQuestionLabelAndInput(q_inp_value) {
     const question = document.createElement('div')
     question.classList.add("question")
@@ -27,24 +28,26 @@ function createQuestionLabelAndInput(q_inp_value) {
     q_inp.required = true
     q_inp.value = q_inp_value
 
-    // const para = document.createElement("p");
-    // var values = ["ด้านพุทธิพิสัย","จำ ", "เข้าใจ ", "ประยุกต์ใช้ ", "วิเคราะห์ ","ประเมินค่า ","สร้างสรรค์ "];
- 
-    // var select = document.createElement("select");
-    // select.name = `q_select_${q_number}`;
-    // select.id = `q_select_${q_number}`
-    // select.classList.add('form-select')
-    // for (const val of values)
-    // {
-    //     var option = document.createElement("option");
-    //     option.value = val;
-    //     option.text = val.charAt(0).toUpperCase() + val.slice(1);
-    //     select.appendChild(option);
-    // }
+    var values = ["จำ", "เข้าใจ", "ประยุกต์ใช้", "วิเคราะห์", "ประเมินค่า", "สร้างสรรค์"];
+
+    var select = document.createElement("select");
+    select.name = `qt_${q_number}`;
+    select.id = `qt_${q_number}`;
     
+
+    for (const val of values) {
+        var option = document.createElement("option");
+        option.value = val;
+        option.text = val.charAt(0).toUpperCase() + val.slice(1);
+        select.appendChild(option);
+    }
+
+
+
     question.appendChild(label)
     question.appendChild(q_inp)
-    // question.appendChild(select)
+    question.appendChild(select)
+
     return { question, q_inp }
 }
 

@@ -10,7 +10,7 @@ def createQuiz(data, user):
             hour = int(data['start-time'][:2])
             minute = int(data['start-time'][3:])
             startDate = data['start-date']
-         
+
             startDateTime = datetime.strptime(
                 startDate, '%Y-%m-%d').replace(hour=hour, minute=minute)
         else:
@@ -28,8 +28,8 @@ def createQuestions(data, quiz, startIdx):
     for q_number in range(startIdx, len(data)):
         try:
             question = Question.objects.create(
-                question=data[f'q_{q_number}'], quiz=quiz, point=data[f'{q_number}_point'])
-
+                question=data[f'q_{q_number}'], quiz=quiz, point=data[f'{q_number}_point'], typequestion=data[f'qt_{q_number}'])
+# qt_1
             createChoices(data, q_number, question)
             createAnswers(data, q_number, question)
 

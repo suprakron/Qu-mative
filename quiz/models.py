@@ -70,7 +70,9 @@ class QuestionManager(models.Manager):
 class Question(models.Model):
     quiz = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     question = models.CharField(max_length=500)
+    typequestion = models.CharField(max_length=500)
     #ต้องสร้างคำถามประเภทไหน
+
     point = models.IntegerField()
     type = models.CharField(max_length=20, null=True)
 

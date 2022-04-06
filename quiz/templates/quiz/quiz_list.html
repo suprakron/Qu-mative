@@ -4,9 +4,6 @@
 
 
 <style>
-    .main{
-        background-color: aqua;
-    }
     .card-footer.social-item{
     height: 50px;
 	width: 50px;
@@ -14,68 +11,64 @@
     filter: grayscale(1);
 	transition: .3s ease filter;
 }
-
 </style>
 
 {% include 'quiz/navbar.html' %}
-<div class="main"> 
-    <div class="create_new_quiz">
-        <a href="{% url 'new-quiz' %}" class="btn btn-outline-info" role="button">สร้างแบบทดสอบ</a>
-    </div>
-    
-    <header>
-        <h2>แบบทดสอบ</h2>
-        <hr>
-    </header>
-    
-    
-    <div class="container mt-5">
-        <div class="row">
-    
-            {% for quiz in object_list %}
-    
-            {% include 'quiz/duplicate_modal.html' %}
-    
-            <form id='{{quiz.id}}' method="POST" action="{% url 'quiz-delete' quiz.id %}" hidden>
-                {% csrf_token %}<input type="submit" value="ลบ">
-            </form>
-    
-            <div class="col-3 mb-4">
-                <div class="card bg-dark text-white h-100">
-                    <div class="card-body">
-    
-                        <h4 class="card-title mb-4">
-                            {{quiz.name}}
-                        </h4>
-                       
-                    </div>
-                    <div class="card-footer">
-                        
-                            <a href="{% url 'quiz-update' quiz.id%}" class='card-link'>แก้ไข</a>
-                            <!-- <a href="{{quiz.get_absolute_url}}" class="card-link">มุมมอง</a>     -->
-                           
+
+<div class="create_new_quiz">
+    <a href="{% url 'new-quiz' %}" class="btn btn-outline-info" role="button">สร้างแบบทดสอบ</a>
+</div>
+
+<header>
+    <h2>แบบทดสอบ</h2>
+    <hr>
+</header>
+
+
+<div class="container mt-5">
+    <div class="row">
+
+        {% for quiz in object_list %}
+
+        {% include 'quiz/duplicate_modal.html' %}
+
+        <form id='{{quiz.id}}' method="POST" action="{% url 'quiz-delete' quiz.id %}" hidden>
+            {% csrf_token %}<input type="submit" value="ลบ">
+        </form>
+
+        <div class="col-3 mb-4">
+            <div class="card bg-dark text-white h-100">
+                <div class="card-body">
+
+                    <h4 class="card-title mb-4">
+                        {{quiz.name}}
+                    </h4>
+                   
+                </div>
+                <div class="card-footer">
                     
-    
-            
-                        <a href="#" class='card-link share' data-value='{{quiz.id}}' data-toggle="tooltip"
-                            title="Link Copied to Clipboard!" 
-                            {% if quiz.timeLimit is not None and quiz.startDateTime is not None %} data-timer-set='1' {% else %} data-timer-set='0' {% endif %}>Share</a>
-                              <!--ส่วนที่เกี่ยวข้องกับ Google classroom-->
+                        <a href="{% url 'quiz-update' quiz.id%}" class='card-link'>แก้ไข</a>
                        
-    
-                              
+                
+
+        
+                    <a href="#" class='card-link share' data-value='{{quiz.id}}' data-toggle="tooltip"
+                        title="Link Copied to Clipboard!" 
+                        {% if quiz.timeLimit is not None and quiz.startDateTime is not None %} data-timer-set='1' {% else %} data-timer-set='0' {% endif %}>Share</a>
+                          <!--ส่วนที่เกี่ยวข้องกับ Google classroom-->
+                   
+
                           
-                              <g:sharetoclassroom size=32 url="http://127.0.0.1:8000/take-quiz/{{quiz.id}}/register/"></g:sharetoclassroom>
-                        {% include 'quiz/3dot_menu.html' %}
-                    </div>
+                          <!-- <a href="{{quiz.get_absolute_url}}" class="card-link">มุมมอง</a>     -->
+                          <g:sharetoclassroom size=32 url="http://127.0.0.1:8000/take-quiz/{{quiz.id}}/register/"></g:sharetoclassroom>
+                    {% include 'quiz/3dot_menu.html' %}
                 </div>
             </div>
-    
-            {% endfor %}
         </div>
-    
+
+        {% endfor %}
     </div>
-    
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

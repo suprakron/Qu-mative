@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #33bdd5;
+  background: #252c4a;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #fff;
@@ -107,7 +107,7 @@ footer {
   border-radius: 0.8rem;
   /* border: 2px solid #264868; */
   padding: 0.8rem;
-  color: #634d96;
+  color: #d8d8d8;
   position: relative;
   display: flex;
   justify-content: flex-start;

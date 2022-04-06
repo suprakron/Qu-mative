@@ -32,8 +32,9 @@
         </div>
 
 
+
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 mb-4">
                 <form class="quiz-form">
                     {% for question in questions %}
                     <div class="question">
@@ -41,8 +42,8 @@
                         <!-- ส่วนของฟอร์มข้อคำถาม -->
                         <div class="questionHeader">
                             <p class="quiz-form__question">{{question.question}}</p>
+                            <p class="quiz-form__question"> พุทธิพิสัย: {{question.typequestion}}</p>
                             <div class="point">
-
                                 <p>{{question.point}}</p>
                                 {% if question.point == 1 %}
                                 <span>point</span>
@@ -77,14 +78,46 @@
                     {% endfor %}
 
                 </form>
-            </div>
-            <div class="col-6">
 
-                <div class="myChart"></div>
+
 
 
 
             </div>
+
+            <br>
+            <h3 style="text-align: center;">ผลสรุปการทำแบบทดสอบในแต่ละด้านตามพุทธิพิสัย</h3>
+            <div class="grid">
+                <div class="grid__item">
+                    <br>
+                    <p>คะแนนด้านพุทธิพิสัยที่ถูกต้อง</p><br>
+                    <p>พุทธิพิสัยด้านความจำ : {{assessteaching.Remember}} ข้อ </p><br>
+                    <p>พุทธิพิสัยด้านความเข้าใจ : {{assessteaching.Understand}} ข้อ</p><br>
+                    <p>พุทธิพิสัยด้านประยุกต์ใช้ : {{assessteaching.Apply}} ข้อ</p><br>
+                    <p>พุทธิพิสัยด้านวิเคราะห์ : {{assessteaching.Analyze}} ข้อ</p><br>
+                    <p>พุทธิพิสัยด้านประเมินค่า : {{assessteaching.Evaluate}} ข้อ</p><br>
+                    <p>พุทธิพิสัยด้านสร้างสรรค์ : {{assessteaching.Creative}} ข้อ</p><br>
+                    <p>รวมทั้งหมด  : {{assessteaching.together}} ข้อ</p><br>
+                </div>
+                <div class="grid__item">
+                    <div class="col-6 mt-5 ">
+                        <br>
+                        <!-- ["จำ", "เข้าใจ", "ประยุกต์ใช้", "วิเคราะห์", "ประเมินค่า", "สร้างสรรค์"] -->
+                        <p>คะแนนด้านพุทธิพิสัยที่ผิดพลาด</p><br>
+                        <p>พุทธิพิสัยด้านความจำ : {{mistakesassessteaching.Remember}} ข้อ  </p><br>
+                        <p>พุทธิพิสัยด้านความเข้าใจ : {{mistakesassessteaching.Understand}} ข้อ</p><br>
+                        <p>พุทธิพิสัยด้านประยุกต์ใช้ : {{mistakesassessteaching.Apply}} ข้อ</p><br>
+                        <p>พุทธิพิสัยด้านวิเคราะห์ : {{mistakesassessteaching.Analyze}} ข้อ</p><br>
+                        <p>พุทธิพิสัยด้านประเมินค่า : {{mistakesassessteaching.Evaluate}} ข้อ</p><br>
+                        <p>พุทธิพิสัยด้านสร้างสรรค์ : {{mistakesassessteaching.Creative}} ข้อ</p><br>
+                        <p>รวมทั้งหมด  : {{mistakesassessteaching.together}} ข้อ</p><br>
+                    </div>
+                </div>
+
+            </div>
+
+
+
         </div>
 
 

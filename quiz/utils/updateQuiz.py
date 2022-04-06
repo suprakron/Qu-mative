@@ -13,6 +13,7 @@ def _updateQuiz(data, quiz):
     for q_number, question in enumerate(quiz.question_set.all(), start=1):
         try:
             question.question = data[f'q_{q_number}']
+            question.typequestion = data[f'qt_{q_number}']
             question.point = data[f'{q_number}_point']
             question.save()
 

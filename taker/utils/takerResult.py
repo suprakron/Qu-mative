@@ -1,10 +1,11 @@
 class TakerQuestion:
-    def __init__(self, question, point, type, choices=[], answer=None):
+    def __init__(self, question, point, type, typequestion,choices=[], answer=None):
         self.question = question
         self.point = point
         self.type = type
         self.choices = choices
         self.answer = answer
+        self.typequestion = typequestion
 
 
 class TakerChoice:
@@ -26,7 +27,7 @@ def createTakerQuestionsList(questions, taker):
 
     for question in questions:
         t_question = TakerQuestion(
-            question.question, question.point, question.type)
+            question.question, question.point, question.type,question.typequestion)
 
         if t_question.type == 'short':
             t_question.answer = getTakerShortAnswer(question, taker)
@@ -35,7 +36,7 @@ def createTakerQuestionsList(questions, taker):
             t_question.choices = getTakerQuestionChoices(question, taker)
 
         t_questions.append(t_question)
-
+        # print(t_question)
     return t_questions
 
 
