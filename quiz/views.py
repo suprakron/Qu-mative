@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
 from django.core.exceptions import PermissionDenied
-from .models import Quiz,Student
+from .models import Quiz 
 from quiz.utils.createQuiz import createQuiz
 from quiz.utils.updateQuiz import _updateQuiz
 from quiz.utils.duplicateQuiz import duplicateQuiz
@@ -103,79 +103,17 @@ def quizResult(request, pk):
     takers = quiz.taker_set.all()
     return render(request, 'quiz/result.html', {'quiz': quiz, 'takers': takers})
 
-
-# def Export_quiz(request):
-#     response=HttpResponse(content_type="text/csv")
-#     response["content-Disposition"]='attachment ; filename=takers'+str(datetime.datetime.now())+'.csv'
-#     writer=csv.writer(response)
-#     writer.writerow(['name' , 'email' , 'score' , 'quiz'])
-#     takers = quiz.taker_set.all()
-#     for quiz in takers :
-#         writer.writerow([quiz.name , quiz.email , quiz.quiz ])
-#     return response
+ 
 
 
 
-def student_list(request):
-    students=Student.objects.all()
-    
-    return render(request , 'quiz/studentlist.html' , {'students':students})
+ 
 
 
 
-def student_details( request , pk) :
-    student=Student.objects.get(id = pk)
-    return render(request , 'quiz/studentdetails.html' , {'student':student})
+ 
 
-
-
-def Export_students(request):
-    response=HttpResponse(content_type="text/csv")
-    response["content-Disposition"]='attachment ; filename=students'+str(datetime.datetime.now())+'.csv'
-    writer=csv.writer(response) 
-    writer.writerow(['id' , 'Name' , 'Last Name' , 'Student Code'])
-    students=Student.objects.all()
-    for student in students :
-        writer.writerow([student.id , student.Name , student.Family , student.Code])
-    return response
-
-
-
-def export_excel(response):
-    response=HttpResponse(content_type="apllication/ms-excel")
-    response["content-Disposition"]='attachment ; filename=Takers'+str(datetime.datetime.now())+'.xls'
-    
-    workbook=xlwt.Workbook(encoding='utf-8')
-    worksheet=workbook.add_sheet("Takers")
-    columns=['name' , 'email' , 'score'  ]
-    rownumber=0
-    
-    for col in range(len(columns)):
-        worksheet.write(rownumber , col , columns[col])
-        
-    Takers=taker.objects.all().values_list('name' , 'email' , 'score')
-    
-    for std in Takers:
-        rownumber+=1
-        
-        for col in range(len(std)):
-            worksheet.write(rownumber , col , std[col])
-    
-    workbook.save(response)
-    return response
-
-
-def export_pdf(request):
-    response=HttpResponse(content_type="apllication/pdf")
-    response["content-Disposition"]='attachment ; filename=students'+str(datetime.datetime.now())+'.pdf'
-    
-    template_path="quiz/studentspdf.html"
-    template=get_template(template_path)
-    students=Student.objects.all()
-    context={"students": students}
-    html=template.render(context)
-    pisa.CreatePDF( html , dest=response  )
-    return response
+ 
 
  
 

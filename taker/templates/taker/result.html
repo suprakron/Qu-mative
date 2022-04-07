@@ -1,6 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="{% static 'taker/result.css' %}">
+<link rel="stylesheet" href="{% static 'taker/table-result.css' %}">
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -84,6 +85,72 @@
 
 
             </div>
+
+
+
+
+            <table>
+               
+                <caption>Employee Data</caption>
+               
+                <thead>
+                    
+                  <tr>
+               
+                    <th scope="col">Name</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Job Role</th>
+                  </tr>
+                </thead>
+               
+                <tbody>
+                  <tr>
+                    <th scope="row">Salina Brown</th>
+                    <td>hello@salinabrown.com</td>
+                    <td>Project Manager</td>
+                  </tr>
+                  <tr>
+                    
+                    <th scope="row">J.P. Espinal</th>
+                    <!--The table cell element <td> contains data and represents a single table cell. Each table cell should be inside a table row.-->
+                    <td>hello@jpespinal.com</td>
+                    <td>Designer/Developer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Robert Young</th>
+                    <td>hello@robertyoung.com</td>
+                    <td>Nobody Knows</td>
+                  </tr>
+                </tbody>
+ 
+                <tfoot>
+                  <tr>
+                   
+                    <td colspan="3">Data is updated every 15 minutes.</td>
+                  </tr>
+                </tfoot>
+              </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <br>
             <h3 style="text-align: center;">ผลสรุปการทำแบบทดสอบในแต่ละด้านตามพุทธิพิสัย</h3>

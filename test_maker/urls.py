@@ -21,11 +21,7 @@ urlpatterns = [
     path('quiz/<int:pk>/duplicate/', quiz_views.quizDuplicate, name='quiz-duplicate'),
     path('quiz/<int:pk>/result/', quiz_views.quizResult, name='quiz-result'),
     
-    path('student_list/', quiz_views.student_list),
-    path('studentdetails/<pk>',quiz_views.student_details , name="studentdetails"),
-    path('Exportstudent/', quiz_views.Export_students , name="exportstudent"),
-    path('Exportexcel/', quiz_views.export_excel , name="exportexcel"),
-    path('Exportpdf/', quiz_views.export_pdf , name="exportpdf"),
+   
    
    
    
