@@ -198,5 +198,5 @@ def result(request, pk, taker_id):
     return render(request, 'taker/result.html', {'score': score, 'quiz': quiz, 'questions': takerQuestions, 'assessteaching': assessteaching, 'mistakesassessteaching': mistakesassessteaching, "quantityexams": quantityexams})
 
 
-def Ans_overview(request):
-    return render(request, 'taker/Answer_overview.html')
+def resultbloom(request):
+    return render(request, 'taker/table-result.html')

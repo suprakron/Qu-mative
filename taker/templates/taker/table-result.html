@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Table Result Bloom</title>
+    <link rel="stylesheet" href="{% static 'taker/table-result.css' %}">
+     
+</head>
+
+<body>
+    <table>
+        <caption>
+            <h3 style="text-align: center;">ผลสรุปการทำแบบทดสอบในแต่ละด้านตามพุทธิพิสัย</h3>
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">
+                    <p>คะแนนด้านพุทธิพิสัยที่ถูกต้อง</p>
+                </th>
+                <th scope="col">
+                    <p>คะแนนด้านพุทธิพิสัยที่ผิดพลาด</p>
+                </th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">
+                    <p>พุทธิพิสัยด้านความจำ : {{assessteaching.Remember}} ข้อ </p>
+                </th>
+                <td>
+                    <p>พุทธิพิสัยด้านความจำ : {{mistakesassessteaching.Remember}} ข้อ </p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <p>พุทธิพิสัยด้านความเข้าใจ : {{assessteaching.Understand}} ข้อ</p>
+                </th>
+                <td>
+                    <p>พุทธิพิสัยด้านความเข้าใจ : {{mistakesassessteaching.Understand}} ข้อ</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <p>พุทธิพิสัยด้านประยุกต์ใช้ : {{assessteaching.Apply}} ข้อ</p>
+                </th>
+                <td>
+                    <p>พุทธิพิสัยด้านประยุกต์ใช้ : {{mistakesassessteaching.Apply}} ข้อ</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <p>พุทธิพิสัยด้านวิเคราะห์ : {{assessteaching.Analyze}} ข้อ</p>
+                </th>
+                <td>
+                    <p>พุทธิพิสัยด้านวิเคราะห์ : {{mistakesassessteaching.Analyze}} ข้อ</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <p>พุทธิพิสัยด้านประเมินค่า : {{assessteaching.Evaluate}} ข้อ</p>
+                </th>
+                <td>
+                    <p>พุทธิพิสัยด้านประเมินค่า : {{mistakesassessteaching.Evaluate}} ข้อ</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <p>พุทธิพิสัยด้านสร้างสรรค์ : {{assessteaching.Creative}} ข้อ</p>
+                </th>
+                <td>
+                    <p>พุทธิพิสัยด้านสร้างสรรค์ : {{mistakesassessteaching.Creative}} ข้อ</p>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <p>รวมทั้งหมด : {{assessteaching.together}} ข้อ</p>
+                </th>
+                <td>
+                    <p>รวมทั้งหมด : {{mistakesassessteaching.together}} ข้อ</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

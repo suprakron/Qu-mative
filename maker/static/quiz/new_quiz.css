@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: #252c4a;
+    background: #4ebae1e5;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
 }
@@ -36,7 +36,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 input.heading__text:-webkit-autofill, input.heading__text:-webkit-autofill:hover, input.heading__text:-webkit-autofill:focus, input.heading__text:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #252c4a inset !important;
+    -webkit-box-shadow: 0 0 0 30px #46e8eb inset !important;
     -webkit-text-fill-color: white;
     caret-color: white;
 }
@@ -70,10 +70,10 @@ input.heading__text:-webkit-autofill, input.heading__text:-webkit-autofill:hover
 .footer {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid rgb(74, 70, 70);
+    border-top: 1px solid rgb(26, 23, 23);
     padding-top: 1rem;
     margin-top: 2rem;
-    color: rgb(170 170 170);
+    color: rgb(23, 19, 19);
 }
 
 .footerBtns {
@@ -89,7 +89,7 @@ input.heading__text:-webkit-autofill, input.heading__text:-webkit-autofill:hover
     width: 5rem;
     border: none;
     padding: 0.4rem;
-    background: #bd2130;
+    background:#b82260;
     color: #fff;
     text-transform: uppercase;
     font-size: 0.7rem;
@@ -103,10 +103,10 @@ input.heading__text:-webkit-autofill, input.heading__text:-webkit-autofill:hover
     width: 3rem;
     outline: none;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(32, 30, 30);
     font-size: 1.2rem;
     text-align: center;
-    color: rgb(170 170 170);
+    color: rgb(34, 31, 31);
 }
 
 .point span {
@@ -125,8 +125,8 @@ input[type='text'] {
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 1px solid gray;
-    color: white;
+    border-bottom: 1px solid rgb(14, 14, 14);
+    color: rgb(19, 18, 18);
 }
 
 .quiz-form__ans input[type='text'] {
@@ -134,15 +134,15 @@ input[type='text'] {
 }
 
 .quiz-form__ans input[type='text']::placeholder {
-    color: rgb(140, 140, 140);
+    color: rgb(26, 25, 25);
 }
 
 .quiz-form__ans input.add_choice {
-    border-bottom: 1px solid rgb(70, 70, 70);
+    border-bottom: 1px solid rgb(22, 17, 17);
 }
 
 .quiz-form__ans input.add_choice::placeholder {
-    color: rgb(100, 100, 100);
+    color: rgb(14, 13, 13);
 }
 
 input[type='text']:focus, .point input:focus {
@@ -155,10 +155,10 @@ input[type='text']:focus, .point input:focus {
 }
 
 .question {
-    background-color: rgb(22 20 20);
+    background-color: #fcfeffe5;
     padding: 2rem;
     border-radius: 15px;
-    color: white;
+    color: rgb(14, 13, 13);
 }
 
 .quiz-form__ans {
@@ -201,7 +201,7 @@ input[type=radio] {
 .design {
     width: 1rem;
     height: 1rem;
-    border: 2px solid #a1a9bd;
+    border: 2px solid #1146ce;
     border-radius: 100%;
     margin-right: 1rem;
     position: relative;

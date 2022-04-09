@@ -31,6 +31,6 @@ urlpatterns = [
     path('take-quiz/<int:pk>/<int:taker_id>/', taker_views.takeQuiz,name='take-quiz'),
     path('take-quiz/<int:pk>/<int:taker_id>/submit/', taker_views.submitQuiz, name='submit-quiz'),
     path('take-quiz/<int:pk>/<int:taker_id>/result/', taker_views.result, name='result'),
-    path('answer_overview/', taker_views.Ans_overview, name='answer_overview'),
+    path('answer_overview/', taker_views.resultbloom, name='result_bloom'),
 ]
 

@@ -10,7 +10,7 @@
     <div class="heading">
         <h1 class="heading__text">{{quiz.name}}</h1>
     </div>
-    <a href="{% url 'answer_overview'%}">
+    <a href="{% url 'result_bloom'%}">
 
         <div align="center">
             <button type="button" class="btn btn-primary">ผลสรุป</button>
@@ -55,9 +55,6 @@
                             </div>
                         </div>
 
-
-
-
                         {% if question.type == 'mcq' %}
 
                         {% include 'taker/mcq.html' %}
@@ -72,87 +69,56 @@
 
                         {% endif %}
 
-
-
                     </div>
-
                     {% endfor %}
 
                 </form>
-
-
-
-
-
             </div>
 
 
-
-
             <table>
-               
-                <caption>Employee Data</caption>
-               
+                <caption>  <h3 style="text-align: center;">ผลสรุปการทำแบบทดสอบในแต่ละด้านตามพุทธิพิสัย</h3></caption>
                 <thead>
-                    
                   <tr>
-               
-                    <th scope="col">Name</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Job Role</th>
+                    <th scope="col"> <p>คะแนนด้านพุทธิพิสัยที่ถูกต้อง</p></th>
+                    <th scope="col"> <p>คะแนนด้านพุทธิพิสัยที่ผิดพลาด</p></th>
+                    
                   </tr>
                 </thead>
                
                 <tbody>
                   <tr>
-                    <th scope="row">Salina Brown</th>
-                    <td>hello@salinabrown.com</td>
-                    <td>Project Manager</td>
+                    <th scope="row"> <p>พุทธิพิสัยด้านความจำ : {{assessteaching.Remember}} ข้อ </p></th>
+                    <td> <p>พุทธิพิสัยด้านความจำ : {{mistakesassessteaching.Remember}} ข้อ  </p></td>
                   </tr>
                   <tr>
-                    
-                    <th scope="row">J.P. Espinal</th>
-                    <!--The table cell element <td> contains data and represents a single table cell. Each table cell should be inside a table row.-->
-                    <td>hello@jpespinal.com</td>
-                    <td>Designer/Developer</td>
-                  </tr>
+                    <th scope="row"><p>พุทธิพิสัยด้านความเข้าใจ : {{assessteaching.Understand}} ข้อ</p> </th>
+                    <td>  <p>พุทธิพิสัยด้านความเข้าใจ : {{mistakesassessteaching.Understand}} ข้อ</p></td>
+                </tr>
                   <tr>
-                    <th scope="row">Robert Young</th>
-                    <td>hello@robertyoung.com</td>
-                    <td>Nobody Knows</td>
-                  </tr>
+                    <th scope="row"><p>พุทธิพิสัยด้านประยุกต์ใช้ : {{assessteaching.Apply}} ข้อ</p>  </th>
+                    <td> <p>พุทธิพิสัยด้านประยุกต์ใช้ : {{mistakesassessteaching.Apply}} ข้อ</p></td>
+                </tr>
+                  <tr>
+                    <th scope="row"> <p>พุทธิพิสัยด้านวิเคราะห์ : {{assessteaching.Analyze}} ข้อ</p>  </th>
+                    <td><p>พุทธิพิสัยด้านวิเคราะห์ : {{mistakesassessteaching.Analyze}} ข้อ</p></td>
+                </tr>
+                  <tr>
+                    <th scope="row"> <p>พุทธิพิสัยด้านประเมินค่า : {{assessteaching.Evaluate}} ข้อ</p> </th>
+                    <td> <p>พุทธิพิสัยด้านประเมินค่า : {{mistakesassessteaching.Evaluate}} ข้อ</p></td>
+                </tr>
+                  <tr>
+                    <th scope="row">  <p>พุทธิพิสัยด้านสร้างสรรค์ : {{assessteaching.Creative}} ข้อ</p> </th>
+                    <td> <p>พุทธิพิสัยด้านสร้างสรรค์ : {{mistakesassessteaching.Creative}} ข้อ</p></td>
+                </tr>
+                  <tr>
+                    <th scope="row">  <p>รวมทั้งหมด  : {{assessteaching.together}} ข้อ</p> </th>
+                    <td> <p>รวมทั้งหมด  : {{mistakesassessteaching.together}} ข้อ</p></td>
+                </tr>
                 </tbody>
- 
-                <tfoot>
-                  <tr>
-                   
-                    <td colspan="3">Data is updated every 15 minutes.</td>
-                  </tr>
-                </tfoot>
               </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <br>
+            <!-- <br>
             <h3 style="text-align: center;">ผลสรุปการทำแบบทดสอบในแต่ละด้านตามพุทธิพิสัย</h3>
             <div class="grid">
                 <div class="grid__item">
@@ -169,7 +135,7 @@
                 <div class="grid__item">
                     <div class="col-6 mt-5 ">
                         <br>
-                        <!-- ["จำ", "เข้าใจ", "ประยุกต์ใช้", "วิเคราะห์", "ประเมินค่า", "สร้างสรรค์"] -->
+                        <!-- ["จำ", "เข้าใจ", "ประยุกต์ใช้", "วิเคราะห์", "ประเมินค่า", "สร้างสรรค์"]  
                         <p>คะแนนด้านพุทธิพิสัยที่ผิดพลาด</p><br>
                         <p>พุทธิพิสัยด้านความจำ : {{mistakesassessteaching.Remember}} ข้อ  </p><br>
                         <p>พุทธิพิสัยด้านความเข้าใจ : {{mistakesassessteaching.Understand}} ข้อ</p><br>
@@ -181,66 +147,10 @@
                     </div>
                 </div>
 
-            </div>
-
-
+            </div> -->
 
         </div>
-
-
     </div>
 </div>
 
-
-<script>
-
-    var state = {
-        'items': [],
-        'values': [],
-    }
-
-    var objId = "{{question}}"
-
-    var dataURL = `/taker/result/${objId}/`
-    $.ajax({
-        method: 'GET',
-        url: dataURL,
-        success: function (response) {
-            console.log('RESPONSE:', response)
-            for (var i in response) {
-
-                var key = Object.keys(response[i])[0]
-                var value = Object.values(response[i])[0]
-
-                state.items.push(key)
-                state.values.push(value)
-            }
-
-            console.log('STATE:', state)
-            buildChart()
-
-        }
-    })
-
-    function buildChart() {
-        var chartData = {
-            "type": "bar",
-            "scale-x": {
-                "values": state.items
-            },
-            "series": [
-                {
-                    "values": state.values
-                }
-            ]
-        }
-        zingchart.render({
-            id: "myChart",
-            data: chartData,
-        });
-    }
-
-
-
-
-</script>
+ 

@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: #2e0436;
+    background: #46e8eb ;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
 }
@@ -36,7 +36,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 input.heading__text:-webkit-autofill, input.heading__text:-webkit-autofill:hover, input.heading__text:-webkit-autofill:focus, input.heading__text:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px #252c4a inset !important;
+    -webkit-box-shadow: 0 0 0 30px #46e8eb inset !important;
     -webkit-text-fill-color: white;
     caret-color: white;
 }
