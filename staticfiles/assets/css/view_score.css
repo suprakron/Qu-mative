@@ -1,0 +1,13 @@
+.main1 {
+  border: 50px;
+  margin: 50px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.textli {
+  border: 20px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
